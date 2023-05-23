@@ -21,7 +21,10 @@ productoCargado.push(new Productos('PS5','./img/consolas/ps5.jpg','ps5',30000,'C
 productoCargado.push(new Productos('Nintendo Switch','./img/consolas/nintendoswitch.jpeg','nintendo switch',150000))
 productoCargado.push(new Productos('XBOX Serie S','./img/consolas/xboxseries.jpeg','xboxseries',200000,'Consolas'))
 productoCargado.push(new Productos('XBOX Serie X','./img/consolas/xboxseriex.jpg','xboxseriex',300000,'Consolas'))
-productoCargado.push(new Productos('Nvidia RTX 3080',"./img/juegos/Fifa23.jpeg",'rtx3080',300000,'Componentes PC'))
+productoCargado.push(new Productos('Nvidia RTX 3080',"./img/componentesPC/rtx3080.jpg",'rtx3080',300000,'Componentes PC'))
+productoCargado.push(new Productos('Nvidia RTX 3090',"./img/componentesPC/rtx090.jpg",'rtx3090',500000,'Componentes PC'))
+productoCargado.push(new Productos('Procesador I7',"./img/componentesPC/i7nueva.jpeg",'corei7',360000,'Componentes PC'))
+productoCargado.push(new Productos('Procesador Ryzen7',"./img/componentesPC/ryzen7.jpeg",'ryzen7',340000,'Componentes PC'))
 
 const contenedorProductos  = document.querySelector('#contenedor-productos');
 const botonesCategorias = document.querySelectorAll('.boton-categoria');

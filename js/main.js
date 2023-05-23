@@ -77,14 +77,29 @@ function actualizarBotonAgregar(){
     })
 }
 
-const productosCarrito=[];
+
+let productosCarrito = []
+ let productosCarritoLS = localStorage.getItem('productos-en-carrito');
+
+if(productosCarritoLS)
+{
+    productosCarrito= JSON.parse(productosCarritoLS);
+    actualizarNumero();
+}else
+{
+      productosCarrito=[]
+}
+
+
 function agregarCarrito(e){
 const idBoton=e.currentTarget.id;
 const productoAgregado= productoCargado.find(producto=>producto.id === idBoton);
-if(productosCarrito.some(producto=>producto.id===idBoton)){
+if(productosCarrito.some(producto=>producto.id===idBoton))
+{
     const index = productosCarrito.findIndex(producto=>producto.id===idBoton);
     productosCarrito[index].cantidad++
-}else{
+}else
+{
     productoAgregado.cantidad=1;
     productosCarrito.push(productoAgregado);
 }

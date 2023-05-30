@@ -187,6 +187,7 @@ main{
 }
 
 
+
 /****************carro********************/
 
 .contenedor-carrito{
@@ -338,7 +339,9 @@ main{
         grid-template-columns: 1fr 1fr;
     }
 
-
+.producto-imagen{
+    width: 100%;
+}
 .header-mobile{
     padding: 1rem;
     display: flex;

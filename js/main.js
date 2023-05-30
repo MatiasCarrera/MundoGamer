@@ -33,7 +33,7 @@ let botonesAgregar = document.querySelectorAll('.producto-agregar');
 let numerito = document.querySelector('#numerito')
 
 function cargarProductos(productosElegidos){
-    contenedorProductos.innerHTML="";
+    contenedorProductos.innerHTML = "";
     productosElegidos.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('producto')
@@ -82,7 +82,8 @@ function actualizarBotonAgregar(){
 
 
 let productosCarrito = []
- let productosCarritoLS = localStorage.getItem('productos-en-carrito');
+
+let productosCarritoLS = localStorage.getItem('productos-en-carrito');
 
 if(productosCarritoLS)
 {

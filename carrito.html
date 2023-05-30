@@ -10,7 +10,16 @@
 </head>
 <body>
     <div class="wrapper">
+        <header class="header-mobile">
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+            <h1 class="logo">MundoGamer</h1>
+        </header>
         <aside>
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
             <header>
                 <h1 class="logo">MundoGamer</h1>
             </header>
@@ -36,8 +45,6 @@
             <div id="carrito-productos" class="carrito-productos disabled ">
                 
             </div>
-
-    
                     <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izquierda">
                         <button class="carrito-acciones-vaciar">Vaciar carrito</button>
@@ -56,6 +63,7 @@
                 </div>
         </main>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/carrito.js"></script>
 </body>
 </html>

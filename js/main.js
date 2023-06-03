@@ -9,22 +9,22 @@ class Productos {
     }
 }
 const productoCargado = [];
-// productoCargado.push(new Productos())
+
 productoCargado.push(new Productos("FIFA23", './img/juegos/Fifa23.jpeg' , 'fifa23', 12000, 'Juegos PS5'));
-productoCargado.push(new Productos("Assasin's Creed Valhalla", './img/juegos/acvalhalla.jpeg','acvalhalla',9000,'Juegos PS5'))
+productoCargado.push(new Productos("AC Valhalla", './img/juegos/acvalhalla.jpeg','acvalhalla',9000,'Juegos PS5'))
 productoCargado.push(new Productos("Gran Turismo 7", "./img/juegos/gt7.jpeg",'gt7', 10000, 'Juegos PS5'));
 productoCargado.push(new Productos("Hogwarts Legacy", "./img/juegos/hogwarts.jpeg","hogwarts legacy",11500,'Juegos PS5' ));
 productoCargado.push(new Productos("NBA2k23","./img/juegos/nba2k.jpeg","nba2k23",11000, "juegos PS5"));
-productoCargado.push(new Productos("Resident Evil 4","./img/juegos/re4.jpeg","residente evil 4",8000,"Juegos PS5"));
+productoCargado.push(new Productos("RE4","./img/juegos/re4.jpeg","residente evil 4",8000,"Juegos PS5"));
 productoCargado.push(new Productos('PS4','./img/consolas/ps4.jpg','ps4',150000,'Consolas'));
 productoCargado.push(new Productos('PS5','./img/consolas/ps5.jpg','ps5',30000,'Consolas'))
 productoCargado.push(new Productos('Nintendo Switch','./img/consolas/nintendoswitch.jpeg','nintendo switch',150000))
 productoCargado.push(new Productos('XBOX Serie S','./img/consolas/xboxseries.jpeg','xboxseries',200000,'Consolas'))
 productoCargado.push(new Productos('XBOX Serie X','./img/consolas/xboxseriex.jpg','xboxseriex',300000,'Consolas'))
 productoCargado.push(new Productos('Nvidia RTX 3080',"./img/componentesPC/rtx3080.jpg",'rtx3080',300000,'Componentes PC'))
-productoCargado.push(new Productos('Nvidia RTX 3090',"./img/componentesPC/rtx090.jpg",'rtx3090',500000,'Componentes PC'))
-productoCargado.push(new Productos('Procesador I7',"./img/componentesPC/i7nueva.jpeg",'corei7',360000,'Componentes PC'))
-productoCargado.push(new Productos('Procesador Ryzen7',"./img/componentesPC/ryzen7.jpeg",'ryzen7',340000,'Componentes PC'))
+productoCargado.push(new Productos('RTX 3090',"./img/componentesPC/rtx090.jpg",'rtx3090',500000,'Componentes PC'))
+productoCargado.push(new Productos('INTEL I7',"./img/componentesPC/i7nueva.jpeg",'corei7',360000,'Componentes PC'))
+productoCargado.push(new Productos('Ryzen7',"./img/componentesPC/ryzen7.jpeg",'ryzen7',340000,'Componentes PC'))
 
 const contenedorProductos  = document.querySelector('#contenedor-productos');
 const botonesCategorias = document.querySelectorAll('.boton-categoria');
@@ -96,6 +96,24 @@ if(productosCarritoLS)
 
 
 function agregarCarrito(e){
+    Toastify({
+        text: "Agregado al carrito!",
+        duration: 1000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        borderRadius: '2rem',
+        background: "linear-gradient(to right, #7e007e, #c103c1)",
+        },
+        offset:{
+            x: '1.5rem',
+            y: '1.5rem',
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+
 const idBoton=e.currentTarget.id;
 const productoAgregado= productoCargado.find(producto=>producto.id === idBoton);
 if(productosCarrito.some(producto=>producto.id===idBoton))
